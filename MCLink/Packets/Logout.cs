@@ -4,11 +4,12 @@ namespace MCLink.Packets
 {
     public class Logout : McLinkPacket
     {
-        public Guid Token { get; set; }
+        public override PacketType PacketType => PacketType.Logout;
+        public Guid Token { get; private set; }
         
-        public Logout()
+        public Logout(Guid token = new Guid())
         {
-            PacketType = PacketType.Logout;
+            Token = token;
         }
     }
 }

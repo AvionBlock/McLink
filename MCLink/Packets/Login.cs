@@ -2,11 +2,7 @@ namespace MCLink.Packets
 {
     public class Login : McLinkPacket
     {
-        public byte[]? Data { get; set; }
-
-        public Login()
-        {
-            PacketType = PacketType.Login;
-        }
+        public override PacketType PacketType => PacketType.Login;
+        public object? Data { get; set; }
     }
 }
