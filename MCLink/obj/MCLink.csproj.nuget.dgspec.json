@@ -48,6 +48,14 @@
             "System.Text.Json": {
               "target": "Package",
               "version": "[9.0.5, )"
+            },
+            "Watson.Lite": {
+              "target": "Package",
+              "version": "[6.3.9, )"
+            },
+            "WebSocketSharp": {
+              "target": "Package",
+              "version": "[1.0.3-rc11, )"
             }
           },
           "imports": [

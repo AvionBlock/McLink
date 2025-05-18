@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "2QoklkJp9sc=",
+  "dgSpecHash": "0q1cMI153cw=",
   "success": true,
   "projectFilePath": "/home/asuka/RiderProjects/MCLink/MCLink/MCLink.csproj",
   "expectedPackageFiles": [
+    "/home/asuka/.nuget/packages/cavemantcp/2.0.9/cavemantcp.2.0.9.nupkg.sha512",
+    "/home/asuka/.nuget/packages/ipmatcher/1.0.5/ipmatcher.1.0.5.nupkg.sha512",
     "/home/asuka/.nuget/packages/microsoft.bcl.asyncinterfaces/9.0.5/microsoft.bcl.asyncinterfaces.9.0.5.nupkg.sha512",
+    "/home/asuka/.nuget/packages/regexmatcher/1.0.9/regexmatcher.1.0.9.nupkg.sha512",
     "/home/asuka/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512",
     "/home/asuka/.nuget/packages/system.io.pipelines/9.0.5/system.io.pipelines.9.0.5.nupkg.sha512",
     "/home/asuka/.nuget/packages/system.memory/4.5.5/system.memory.4.5.5.nupkg.sha512",
@@ -12,7 +15,23 @@
     "/home/asuka/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "/home/asuka/.nuget/packages/system.text.encodings.web/9.0.5/system.text.encodings.web.9.0.5.nupkg.sha512",
     "/home/asuka/.nuget/packages/system.text.json/9.0.5/system.text.json.9.0.5.nupkg.sha512",
-    "/home/asuka/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+    "/home/asuka/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+    "/home/asuka/.nuget/packages/timestamps/1.0.11/timestamps.1.0.11.nupkg.sha512",
+    "/home/asuka/.nuget/packages/urlmatcher/3.0.1/urlmatcher.3.0.1.nupkg.sha512",
+    "/home/asuka/.nuget/packages/watson.core/6.3.9/watson.core.6.3.9.nupkg.sha512",
+    "/home/asuka/.nuget/packages/watson.lite/6.3.9/watson.lite.6.3.9.nupkg.sha512",
+    "/home/asuka/.nuget/packages/websocketsharp/1.0.3-rc11/websocketsharp.1.0.3-rc11.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'WebSocketSharp 1.0.3-rc11' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework '.NETStandard,Version=v2.1'. This package may not be fully compatible with your project.",
+      "libraryId": "WebSocketSharp",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.1"
+      ]
+    }
+  ]
 }
