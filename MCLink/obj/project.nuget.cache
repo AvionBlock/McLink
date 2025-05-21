@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "0q1cMI153cw=",
+  "dgSpecHash": "z6hllltgLzI=",
   "success": true,
   "projectFilePath": "/home/asuka/RiderProjects/MCLink/MCLink/MCLink.csproj",
   "expectedPackageFiles": [
@@ -20,18 +20,7 @@
     "/home/asuka/.nuget/packages/urlmatcher/3.0.1/urlmatcher.3.0.1.nupkg.sha512",
     "/home/asuka/.nuget/packages/watson.core/6.3.9/watson.core.6.3.9.nupkg.sha512",
     "/home/asuka/.nuget/packages/watson.lite/6.3.9/watson.lite.6.3.9.nupkg.sha512",
-    "/home/asuka/.nuget/packages/websocketsharp/1.0.3-rc11/websocketsharp.1.0.3-rc11.nupkg.sha512"
+    "/home/asuka/.nuget/packages/watsonwebsocket/4.1.4/watsonwebsocket.4.1.4.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'WebSocketSharp 1.0.3-rc11' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework '.NETStandard,Version=v2.1'. This package may not be fully compatible with your project.",
-      "libraryId": "WebSocketSharp",
-      "targetGraphs": [
-        ".NETStandard,Version=v2.1"
-      ]
-    }
-  ]
+  "logs": []
 }

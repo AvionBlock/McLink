@@ -293,13 +293,17 @@
           }
         }
       },
-      "WebSocketSharp/1.0.3-rc11": {
+      "WatsonWebsocket/4.1.4": {
         "type": "package",
         "compile": {
-          "lib/websocket-sharp.dll": {}
+          "lib/netstandard2.1/WatsonWebsocket.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/websocket-sharp.dll": {}
+          "lib/netstandard2.1/WatsonWebsocket.dll": {
+            "related": ".xml"
+          }
         }
       }
     }
@@ -855,17 +859,30 @@
         "watson.png"
       ]
     },
-    "WebSocketSharp/1.0.3-rc11": {
-      "sha512": "7VCF7f7zVMOvLGD8LeGS4DVXc8lOcB6kXnUMeTxigu+PMiU+6wW5Olq2gYrDU8vDRKOwFY+5RyBaLyzb8skEzA==",
+    "WatsonWebsocket/4.1.4": {
+      "sha512": "NzJZgZ+3hJPBibgeidH7iSLSkZ9lgikhw//efSoW83PvsdDoJ1IBgetXeRQuxIvPTApsazknDCClyKaOVjs1Aw==",
       "type": "package",
-      "path": "websocketsharp/1.0.3-rc11",
+      "path": "watsonwebsocket/4.1.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/websocket-sharp.dll",
-        "lib/websocket-sharp.xml",
-        "websocketsharp.1.0.3-rc11.nupkg.sha512",
-        "websocketsharp.nuspec"
+        "LICENSE.md",
+        "README.md",
+        "lib/net462/WatsonWebsocket.dll",
+        "lib/net462/WatsonWebsocket.xml",
+        "lib/net48/WatsonWebsocket.dll",
+        "lib/net48/WatsonWebsocket.xml",
+        "lib/net6.0/WatsonWebsocket.dll",
+        "lib/net6.0/WatsonWebsocket.xml",
+        "lib/net8.0/WatsonWebsocket.dll",
+        "lib/net8.0/WatsonWebsocket.xml",
+        "lib/netstandard2.0/WatsonWebsocket.dll",
+        "lib/netstandard2.0/WatsonWebsocket.xml",
+        "lib/netstandard2.1/WatsonWebsocket.dll",
+        "lib/netstandard2.1/WatsonWebsocket.xml",
+        "watson.png",
+        "watsonwebsocket.4.1.4.nupkg.sha512",
+        "watsonwebsocket.nuspec"
       ]
     }
   },
@@ -873,7 +890,7 @@
     ".NETStandard,Version=v2.1": [
       "System.Text.Json >= 9.0.5",
       "Watson.Lite >= 6.3.9",
-      "WebSocketSharp >= 1.0.3-rc11"
+      "WatsonWebsocket >= 4.1.4"
     ]
   },
   "packageFolders": {
@@ -928,9 +945,9 @@
             "target": "Package",
             "version": "[6.3.9, )"
           },
-          "WebSocketSharp": {
+          "WatsonWebsocket": {
             "target": "Package",
-            "version": "[1.0.3-rc11, )"
+            "version": "[4.1.4, )"
           }
         },
         "imports": [
@@ -952,17 +969,5 @@
         "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/9.0.105/RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'WebSocketSharp 1.0.3-rc11' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework '.NETStandard,Version=v2.1'. This package may not be fully compatible with your project.",
-      "libraryId": "WebSocketSharp",
-      "targetGraphs": [
-        ".NETStandard,Version=v2.1"
-      ]
-    }
-  ]
+  }
 }

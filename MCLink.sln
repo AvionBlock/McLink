@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCLink", "MCLink\MCLink.csproj", "{DCFD0C25-978C-4F92-A876-734E4A858154}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tester", "Tester\Tester.csproj", "{4CC0C1B3-0B8A-457E-9782-BC697442AD4B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{DCFD0C25-978C-4F92-A876-734E4A858154}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCFD0C25-978C-4F92-A876-734E4A858154}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCFD0C25-978C-4F92-A876-734E4A858154}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CC0C1B3-0B8A-457E-9782-BC697442AD4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CC0C1B3-0B8A-457E-9782-BC697442AD4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CC0C1B3-0B8A-457E-9782-BC697442AD4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CC0C1B3-0B8A-457E-9782-BC697442AD4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

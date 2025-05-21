@@ -53,9 +53,9 @@
               "target": "Package",
               "version": "[6.3.9, )"
             },
-            "WebSocketSharp": {
+            "WatsonWebsocket": {
               "target": "Package",
-              "version": "[1.0.3-rc11, )"
+              "version": "[4.1.4, )"
             }
           },
           "imports": [
