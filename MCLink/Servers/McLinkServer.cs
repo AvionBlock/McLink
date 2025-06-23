@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace MCLink
+namespace MCLink.Servers
 {
     public abstract class McLinkServer
     {

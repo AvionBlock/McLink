@@ -7,6 +7,6 @@ namespace MCLink
     {
         public Guid Token { get; } = Guid.NewGuid();
         
-        internal ConcurrentQueue<McLinkPacket> PacketQueue = new ConcurrentQueue<McLinkPacket>();
+        internal ConcurrentQueue<byte[]> PacketQueue = new ConcurrentQueue<byte[]>();
     }
 }

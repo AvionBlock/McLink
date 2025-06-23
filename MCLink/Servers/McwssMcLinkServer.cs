@@ -43,7 +43,9 @@ namespace MCLink.Servers
             if (e.MessageType != WebSocketMessageType.Text) return;
             var data = Encoding.UTF8.GetString(e.Data);
             var packet = JsonSerializer.Deserialize<McwssPlayerMessageStructure>(data);
-            Console.WriteLine(packet);
+            if(packet == null) return;
+            var rawtextData = JsonSerializer.Deserialize<RawTextStructure>(packet.body.message);
+            Console.WriteLine(rawtextData);
         }
 
         private void CleanupSocket()
@@ -56,16 +58,7 @@ namespace MCLink.Servers
         // ReSharper disable InconsistentNaming
         private class McwssEventStructure
         {
-            public McwssEventHeaders header { get; set; } = new McwssEventHeaders();
             public McwssEventBody body { get; set; } = new McwssEventBody();
-        }
-
-        private class McwssEventHeaders
-        {
-            public string requestId { get; set; } = string.Empty;
-            public string eventName { get; set; } = string.Empty;
-            public string messagePurpose { get; set; } = "subscribe";
-            public int version { get; set; } = 1;
         }
 
         private class McwssEventBody
@@ -75,16 +68,22 @@ namespace MCLink.Servers
 
         private class McwssPlayerMessageStructure
         {
-            public McwssEventHeaders header { get; set; } = new McwssEventHeaders();
             public McwssPlayerMessageBody body { get; set; } = new McwssPlayerMessageBody();
         }
 
         private class McwssPlayerMessageBody
         {
             public string message { get; set; } = string.Empty;
-            public string receiver { get; set; } = string.Empty;
-            public string sender { get; set; } = string.Empty;
-            public string type { get; set; } = string.Empty;
+        }
+
+        private class RawTextStructure
+        {
+            public RawTextMessage[] rawtext { get; set; } = Array.Empty<RawTextMessage>();
+        }
+
+        private class RawTextMessage
+        {
+            public string text { get; set; } = string.Empty;
         }
         // ReSharper enable InconsistentNaming
     }
