@@ -1,5 +1,4 @@
 using System;
-using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 using MCLink.Interfaces;
 
@@ -822,7 +821,7 @@ namespace MCLink.Utils
             return false;
         }
         
-        public bool TryGetString([NotNullWhen(true)] out string? result)
+        public bool TryGetString(out string result)
         {
             if (AvailableBytes >= 2)
             {
@@ -833,7 +832,7 @@ namespace MCLink.Utils
                     return true;
                 }
             }
-            result = null;
+            result = string.Empty;
             return false;
         }
 
