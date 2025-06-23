@@ -1,5 +1,5 @@
 using System;
-using System.IO;
+using MCLink.Utils;
 
 namespace MCLink.Packets
 {
@@ -16,32 +16,33 @@ namespace MCLink.Packets
             Packets = packets ?? Array.Empty<byte[]>();
         }
         
-        public override void Serialize(BinaryWriter writer)
+        public override void Serialize(NetDataWriter writer)
         {
-            writer.Write(Token.ToByteArray());
+            writer.Put(Token);
             if (Packets.Length <= 0)
                 return;
-
-            writer.Write(Packets.Length);
+            
+            writer.Put(Packets.Length);
             foreach (var packet in Packets)
             {
-                writer.Write(packet.Length);
-                writer.Write(packet);
+                writer.Put(packet.Length);
+                writer.Put(packet);
             }
         }
 
-        public override void Deserialize(BinaryReader reader)
+        public override void Deserialize(NetDataReader reader)
         {
-            Token = new Guid(reader.ReadBytes(16));
+            Token = reader.GetGuid();
             
-            var packets = reader.ReadInt32();
+            var packets = reader.GetInt();
             if (packets <= 0) return;
             var newPackets = new byte[packets][];
 
             for (var i = 0; i < packets; i++)
             {
-                var packetLength = reader.ReadInt32();
-                newPackets[i] = reader.ReadBytes(packetLength);
+                var packetLength = reader.GetInt();
+                newPackets[i] = new byte[packetLength];
+                reader.GetBytes(newPackets[i], packetLength);
             }
             
             Packets = newPackets;

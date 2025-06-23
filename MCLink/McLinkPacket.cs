@@ -1,4 +1,5 @@
-using System.IO;
+using MCLink.Interfaces;
+using MCLink.Utils;
 
 namespace MCLink
 {
@@ -6,8 +7,8 @@ namespace MCLink
     {
         public virtual PacketType PacketType { get; } = PacketType.Unknown;
         
-        public abstract void Serialize(BinaryWriter writer);
+        public abstract void Serialize(NetDataWriter writer);
         
-        public abstract void Deserialize(BinaryReader reader);
+        public abstract void Deserialize(NetDataReader reader);
     }
 }

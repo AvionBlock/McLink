@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MCLink")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce0f9bc3da55d1d4c35fec28e1c173b1e9914c56")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9ed1cd5467cd7a78edbd100bd5d5362cafa17c6f")]
 [assembly: System.Reflection.AssemblyProductAttribute("MCLink")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MCLink")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

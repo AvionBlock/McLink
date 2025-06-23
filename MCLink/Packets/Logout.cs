@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using MCLink.Utils;
 
 namespace MCLink.Packets
 {
@@ -13,14 +14,14 @@ namespace MCLink.Packets
             Token = token;
         }
 
-        public override void Serialize(BinaryWriter writer)
+        public override void Serialize(NetDataWriter writer)
         {
-            writer.Write(Token.ToByteArray());
+            writer.Put(Token.ToByteArray());
         }
 
-        public override void Deserialize(BinaryReader reader)
+        public override void Deserialize(NetDataReader reader)
         {
-            Token = new Guid(reader.ReadBytes(16));
+            Token = reader.GetGuid();
         }
     }
 }
