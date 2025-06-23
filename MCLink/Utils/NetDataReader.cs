@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 using MCLink.Interfaces;
 
@@ -724,7 +725,7 @@ namespace MCLink.Utils
 
         public bool TryGetChar(out char result)
         {
-            if (!TryGetUShort(out ushort uShortValue))
+            if (!TryGetUShort(out var uShortValue))
             {
                 result = '\0';
                 return false;
@@ -820,8 +821,8 @@ namespace MCLink.Utils
             result = 0;
             return false;
         }
-
-        public bool TryGetString(out string? result)
+        
+        public bool TryGetString([NotNullWhen(true)] out string? result)
         {
             if (AvailableBytes >= 2)
             {
