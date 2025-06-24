@@ -9,11 +9,11 @@ namespace MCLink.Servers
     public abstract class McLinkServer
     {
         protected readonly NetDataReader Reader = new NetDataReader();
-        protected readonly ConcurrentDictionary<IPEndPoint, McLinkPeer> _connectedPeers = new ConcurrentDictionary<IPEndPoint, McLinkPeer>();
-        protected readonly ConcurrentDictionary<IPEndPoint, McLinkConnectionRequest> _connectionRequests = new ConcurrentDictionary<IPEndPoint, McLinkConnectionRequest>();
+        protected readonly ConcurrentDictionary<IPEndPoint, McLinkPeer> ConnectedPeerList = new ConcurrentDictionary<IPEndPoint, McLinkPeer>();
+        protected readonly ConcurrentDictionary<IPEndPoint, McLinkConnectionRequest> ConnectionRequestsList = new ConcurrentDictionary<IPEndPoint, McLinkConnectionRequest>();
         
-        public IEnumerable<McLinkPeer> ConnectedPeers => _connectedPeers.Values;
-        public IEnumerable<McLinkConnectionRequest> ConnectionRequests => _connectionRequests.Values;
+        public IEnumerable<McLinkPeer> ConnectedPeers => ConnectedPeerList.Values;
+        public IEnumerable<McLinkConnectionRequest> ConnectionRequests => ConnectionRequestsList.Values;
 
         public abstract void Start(int port);
 
@@ -36,7 +36,7 @@ namespace MCLink.Servers
 
         private void HandleFragmentPacket(FragmentPacket fragmentPacket, IPEndPoint endPoint)
         {
-            if (!_connectedPeers.TryGetValue(endPoint, out var peer)) return;
+            if (!ConnectedPeerList.TryGetValue(endPoint, out var peer)) return;
             if (!peer.FragmentedPackets.TryGetValue(fragmentPacket.FragmentId, out var writer))
             {
                 writer = new NetDataWriter();
