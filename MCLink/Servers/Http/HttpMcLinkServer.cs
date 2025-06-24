@@ -1,4 +1,4 @@
-namespace MCLink.Servers
+namespace MCLink.Servers.Http
 {
     public class HttpMcLinkServer : McLinkServer
     {
